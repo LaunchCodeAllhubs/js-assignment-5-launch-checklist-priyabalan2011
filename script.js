@@ -18,6 +18,8 @@ form.addEventListener("submit", function (event) {
   let cargoMassInput=document.getElementById("cargoMass");
   let list= document.getElementById("faultyItems");
  // alert(list.value);
+ list.style.visibility = "hidden";
+
   //check all fields are filled
   if (validateInput(pilotNameInput.value) === `Empty`|| validateInput(copilotNameInput.value) === `Empty`|| 
   validateInput(fuelLevelInput.value) === `Empty`||validateInput(cargoMassInput.value) === `Empty`) {
@@ -42,7 +44,7 @@ form.addEventListener("submit", function (event) {
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
-   let listedPlanetsResponse=myFetch();
+   let listedPlanetsResponse = myFetch();
    listedPlanetsResponse.then(function (result) {
        listedPlanets = result;
        console.log(listedPlanets);
