@@ -2,7 +2,6 @@
 require('isomorphic-fetch');
 //require("node-fetch");
 
-
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     let missionTarget = document.getElementById("missionTarget");
     
@@ -26,7 +25,7 @@ function validateInput(testInput) {
    // alert("validate function");
     if (testInput === "" || testInput === null || testInput === 0) {
         return "Empty";
-    } else if ((!isNaN(Number(testInput)))) {
+    } else if ((!isNaN(testInput))) {
         return "Is a Number";
     } else {
         return "Not a Number";
